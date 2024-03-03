@@ -3,11 +3,11 @@ import { Expense } from "../components/Table";
 import { useExpenses } from "../contexts/ExpensesContext";
 
 const FinancialObjectives = () => {
-  const [income, setIncome] = useState(5000);
-  const [savings, setSavings] = useState(1000);
+  const income = 5000;
+  const savings = 1000;
   const [spendings, setSpending] = useState<number>(0);
 
-  const [expenses, setExpenses] = useExpenses();
+  const [expenses] = useExpenses();
 
   const objectives = [
     { lable: "Income", name: "income", color: "bg-primary", value: income },
@@ -26,15 +26,15 @@ const FinancialObjectives = () => {
   ];
 
   useEffect(() => {
-    if (expenses) {
-      const totalSpending = expenses.reduce(
-        (accumulator: number, currentValue: Expense): number => {
-          return accumulator + currentValue.amount;
-        },
-        0
-      );
-      setSpending(totalSpending);
-    }
+    if (expenses.length === 0) return;
+
+    const totalSpending = expenses.reduce(
+      (accumulator: number, currentValue: Expense): number => {
+        return accumulator + currentValue.amount;
+      },
+      0
+    );
+    setSpending(totalSpending);
   }, [expenses]);
 
   return (
@@ -42,12 +42,13 @@ const FinancialObjectives = () => {
       <h2 className="font-bold text-lg text-text_dark2">
         Financial Objectives
       </h2>
+
       <div className="flex gap-6 my-4">
         {objectives.map((objective, index) => {
           return (
             <div
               key={index}
-              className={`border-solid border border-gray-200 rounded-md p-4 ${objective.color}`}
+              className={`border-solid border border-primary2 rounded-md p-4 shadow-md shadow-primary ${objective.color}`}
             >
               <span>{objective.lable} </span>
               <span> : </span>

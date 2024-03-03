@@ -44,24 +44,31 @@
     },
     {
       "amount": 100,
-      "category": "Groceries",
-      "date": "2024-02-28",
+      "category": "Education",
+      "date": "2024-03-22",
       "name": "Movie",
       "id": 9
     },
     {
-      "amount": 200,
-      "category": "Shopping",
-      "date": "2024-03-06",
-      "name": "Dress",
+      "amount": 100,
+      "category": "Healthcare",
+      "date": "2024-02-28",
+      "name": "Movie",
       "id": 10
     },
     {
-      "amount": 300,
-      "category": "Entertainment",
-      "date": "2024-02-29",
+      "amount": 100,
+      "category": "Utilities",
+      "date": "2024-03-14",
       "name": "Movie",
       "id": 11
+    },
+    {
+      "amount": 100,
+      "category": "Entertainment",
+      "date": "2024-03-08",
+      "name": "Movie",
+      "id": 12
     }
   ]
 }

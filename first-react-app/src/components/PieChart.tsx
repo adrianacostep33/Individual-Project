@@ -8,15 +8,17 @@ interface PieChartProps {
 }
 
 const Chart = ({ data, colors }: PieChartProps) => {
-  const chartData = data.map((data, index) => {
-    return {
-      id: index,
-      value: data.amount,
-      label: data.name,
-    };
-  });
+  const chartData = data
+    .filter((data) => data.amount !== 0)
+    .map((data, index) => {
+      return {
+        id: index,
+        value: data.amount,
+        label: data.name,
+      };
+    });
 
-  const TOTAL = chartData.map((item) => item.value).reduce((a, b) => a + b, 0);
+  const TOTAL = chartData.map((item) => item!.value).reduce((a, b) => a + b, 0);
 
   const getArcLabel = (params: DefaultizedPieValueType) => {
     const percent = params.value / TOTAL;

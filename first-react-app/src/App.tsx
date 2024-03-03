@@ -11,6 +11,7 @@ function App() {
           <h1 className="font-bold text-3xl my-6 text-text_dark2 ">
             Expense Tracker
           </h1>
+
           <div className="text-sm">
             <FinancialObjectives />
             <RecentExpenses />

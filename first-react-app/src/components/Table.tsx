@@ -108,7 +108,7 @@ const Table = () => {
             >
               <span className="relative table-cell py-2 px-4">
                 <input
-                  className="border min-w-full px-2 bg-light3 text-gray-500 m-0 focus:border-primary outline-none"
+                  className="border border-bg_card min-w-full px-2 bg-light3 placeholder-text_dark text-text_dark m-0 focus:border-primary outline-none"
                   type="text"
                   placeholder="Enter Expense Name"
                   {...register("name")}
@@ -117,9 +117,10 @@ const Table = () => {
                   {errors.name?.message}
                 </p>
               </span>
+
               <span className="relative table-cell py-2 px-4">
                 <input
-                  className="border min-w-full px-2 bg-light3 text-gray-500 m-0 focus:border-primary outline-none"
+                  className="border border-bg_card min-w-full px-2 bg-light3 text-text_dark m-0 focus:border-primary outline-none"
                   type="date"
                   placeholder="Enter Date"
                   {...register("date")}
@@ -128,14 +129,19 @@ const Table = () => {
                   {errors.date?.message}
                 </p>
               </span>
+
               <span className="relative table-cell py-2 px-4">
                 <select
                   {...register("category")}
-                  className="bg-light3 text-gray-500 m-0 focus:border-primary outline-none"
+                  className="bg-light3 border border-bg_card text-text_dark m-0 focus:border-primary outline-none after:bg-light"
                 >
                   {Object.values(Category)!.map((category, index) => {
                     return (
-                      <option key={index} value={category}>
+                      <option
+                        key={index}
+                        value={category}
+                        className="bg-light3"
+                      >
                         {category}
                       </option>
                     );
@@ -145,9 +151,10 @@ const Table = () => {
                   {errors.category?.message}
                 </p>
               </span>
+
               <span className="relative table-cell py-2 px-4">
                 <input
-                  className="border min-w-full px-2 bg-light3 text-gray-500 m-0 focus:border-primary outline-none"
+                  className="border border-bg_card min-w-full px-2 bg-light3 placeholder-text_dark text-text_dark m-0 focus:border-primary outline-none"
                   type="text"
                   placeholder="Enter Amount"
                   {...register("amount")}
@@ -156,12 +163,14 @@ const Table = () => {
                   {errors.amount?.message}
                 </p>
               </span>
+
               <button
                 className="table-cell m-1 lg:px-4 lg:py-2 bg-primary text-white rounded-md hover:bg-primary2 px-2 py-1"
                 type="submit"
               >
                 Add
               </button>
+
               <button
                 className="table-cell m-1 lg:px-4 lg:py-2 bg-secondary text-white rounded-md hover:bg-bg_card px-2 py-1"
                 type="submit"
@@ -177,9 +186,7 @@ const Table = () => {
             <div className="table-row">
               <span className="table-cell px-4 py-2">
                 <button
-                  className={`flex items-center cursor-pointer hover:scale-110 duration-5 ${
-                    showForm ? "" : ""
-                  } `}
+                  className="flex items-center cursor-pointer hover:scale-110 duration-5"
                   onClick={() => {
                     setShowForm(true);
                   }}
@@ -187,6 +194,7 @@ const Table = () => {
                   <span className="text-text_dark mr-1">
                     <img src={plus} alt="plus-icon" />
                   </span>
+                  
                   <p className="text-text_dark">New</p>
                 </button>
               </span>
