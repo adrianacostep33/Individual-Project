@@ -1,0 +1,67 @@
+{
+  "expenses": [
+    {
+      "name": "Gasoline",
+      "date": "2024-02-27",
+      "category": "Transportation",
+      "amount": 35.25,
+      "id": 2
+    },
+    {
+      "name": "Restaurant",
+      "date": "2024-02-26",
+      "category": "Dining",
+      "amount": 75.8,
+      "id": 3
+    },
+    {
+      "name": "Movie",
+      "date": "2024-02-25",
+      "category": "Entertainment",
+      "amount": 20.5,
+      "id": 4
+    },
+    {
+      "amount": 100,
+      "category": "Utilities",
+      "date": "2024-02-28",
+      "name": "Movie",
+      "id": 5
+    },
+    {
+      "amount": 100,
+      "category": "Entertainment",
+      "date": "2024-03-06",
+      "name": "Movie",
+      "id": 6
+    },
+    {
+      "amount": 100,
+      "category": "Healthcare",
+      "date": "2024-01-31",
+      "name": "Movie",
+      "id": 8
+    },
+    {
+      "amount": 100,
+      "category": "Groceries",
+      "date": "2024-02-28",
+      "name": "Movie",
+      "id": 9
+    },
+    {
+      "amount": 200,
+      "category": "Shopping",
+      "date": "2024-03-06",
+      "name": "Dress",
+      "id": 10
+    },
+    {
+      "amount": 300,
+      "category": "Entertainment",
+      "date": "2024-02-29",
+      "name": "Movie",
+      "id": 11
+    }
+  ]
+}
